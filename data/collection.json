@@ -4655,6 +4655,59 @@
 		"last_contributed": "2020-04-16T20:09:44Z"
 	},
 	{
+		"url": "https://github.com/EyalSec/vulnerable-javascript",
+		"name": "vulnerable-javascript",
+		"slug": "vulnerable-javascript",
+		"collection": [
+			"online",
+			"offline"
+		],
+		"technology": [
+			"JavaScript"
+		],
+		"references": [
+			{
+				"name": "live",
+				"url": "https://eyalsec.github.io/vulnerable-javascript/"
+			},
+			{
+				"name": "guide",
+				"url": "https://eyalsec.github.io/vulnerable-javascript/catalog.html"
+			}
+		],
+		"author": "EyalSec",
+		"description": "Deliberately vulnerable single-page retail dashboard (Northwind Retail Analytics) with 21 DOM-XSS flows across 8 sources (location.hash, location.search, postMessage, document.cookie, localStorage, sessionStorage, window.name, document.referrer) and 18 sinks (innerHTML, eval, new Function, string setTimeout, script src, fetch, WebSocket, document.write and more). Each flaw sits inside a plausible feature, is reachable from one URL, and most have a safe twin beside them. Built as a demonstration target for EyalSec's taint tracking browser, es-chromium.",
+		"notes": "Static site with no backend. To run locally: ./serve.py, then http://127.0.0.1:8000/. Serve it over HTTP rather than opening index.html from disk, since file:// leaves the cookie, referrer and web storage sources empty. The catalog page has a one-click trigger URL for every flow.",
+		"badge": "EyalSec/vulnerable-javascript",
+		"categories": [
+			"free-form",
+			"single-player",
+			"scanner-test"
+		]
+	},
+	{
+		"url": "https://github.com/EyalSec/vulnerable-python",
+		"name": "vulnerable-python",
+		"slug": "vulnerable-python",
+		"collection": [
+			"offline"
+		],
+		"technology": [
+			"Python",
+			"Flask",
+			"SQLite"
+		],
+		"author": "EyalSec",
+		"description": "Deliberately vulnerable Flask app in which each endpoint wires one source of untrusted data (HTTP request, file, environment variable, stdin, argv and more) into one dangerous operation: SQL, OS command, eval/exec, pickle/marshal, path traversal, SSRF, XXE, ReDoS, CSV injection, format strings, dynamic import, native library load and more. Built as a demonstration target for EyalSec runtime taint tracking; under plain Python it is an ordinary, exploitable app.",
+		"notes": "pip install -r requirements.txt (Flask only), then python3 app.py; the endpoint catalog with example attack links is at http://127.0.0.1:5000/. Binds to loopback by default (DEMO_HOST / DEMO_PORT change it). Optional /adapter/* routes need PyYAML, PyJWT, SQLAlchemy, pymongo and redis. Deliberately insecure: run it only on an isolated lab machine and never expose it to the internet.",
+		"badge": "EyalSec/vulnerable-python",
+		"categories": [
+			"free-form",
+			"single-player",
+			"scanner-test"
+		]
+	},
+	{
 		"url": "https://github.com/Erdemstar/VulnerableApp4APISecurity",
 		"name": "VulnerableApp4APISecurity",
 		"slug": "vulnerableapp4apisecurity",
